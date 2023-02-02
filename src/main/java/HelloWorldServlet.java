@@ -9,15 +9,20 @@ import java.io.PrintWriter;
 public class HelloWorldServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException {
         int count;
+        String name;
         try {
             count = Integer.parseInt(req.getParameter("count"));
         }catch(Exception e){
             count = 1;
         }
+        name = req.getParameter("name");
+        if(name == null){
+            name = "World";
+        }
         res.setContentType("text/html");
         PrintWriter out = res.getWriter();
         for (int i = 0; i < count; i++) {
-            out.println("<h1>Hello, World!</h1>");
+            out.println(String.format("<h1>Hello, World!</h1>", name));
         }
     }
 }
