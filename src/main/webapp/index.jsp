@@ -5,7 +5,7 @@
     <title>Welcome to Adlister</title>
 </head>
 <body>
-    <%@include file="partials/navbar.jsp"%>
+    <%@include file="WEB-INF/partials/navbar.jsp"%>
 
     <h1>Welcome to Adlister</h1>
     <hr />

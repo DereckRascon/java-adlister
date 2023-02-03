@@ -40,7 +40,7 @@
 
 <div class="container">
     <h1>Please Log In</h1>
-    <form action="login.jsp" method="post">
+    <form action="login" method="post">
 
         <div class="form-group">
            <lable for="username">Username</lable>
